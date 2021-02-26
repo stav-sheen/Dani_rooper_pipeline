@@ -9,9 +9,14 @@ pipeline {
     quietPeriod(30) //Quiet period in seconds
   }
   stages{
-    stage('Run script'){
+    stage('install requests if not available'){
       steps{
-              sh "python greetings.py"
+              sh "pip install requests"
+        }          
+    }
+    stage('Run weather script'){
+      steps{
+              sh "python weather.py"
         }          
      }
   }
