@@ -1,7 +1,7 @@
 import requests, json 
-  
-# Enter your API key here 
-api_key = "d71f373e048f9c80a4cd78ee5f5aa13e"
+import sys
+# API key saved in jenkins env vars
+api_key = sys.argv[1]
 #open weather map URL
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
 # relevant city

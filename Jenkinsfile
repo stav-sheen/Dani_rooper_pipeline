@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Run weather script'){
       steps{
-              sh "python weather.py"
+              sh "python weather.py ${OMW_API_KEY}"
         }          
      }
   }
