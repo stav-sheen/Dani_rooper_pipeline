@@ -3,7 +3,7 @@
 pipeline {
   agent any
   triggers {
-    cron('0 * * * *')
+    cron('* * * * *')
   }
   options{
     quietPeriod(30) //Quiet period in seconds
